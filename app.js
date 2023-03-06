@@ -59,7 +59,7 @@ function onColorClick(event) {
 function onModeClick() {
     if (isFilling) {
         isFilling = false;
-        modeBtn.innerText = "Fill";
+        modeBtn.innerText = "🩸 Fill";
     } else {
         isFilling = true;
         modeBtn.innerText = "Draw";
@@ -80,7 +80,7 @@ function onDestroyClick() {
 function onEraserClick() {
     ctx.strokeStyle = "white";
     isFilling = false;
-    modeBtn.innerText = "Fill";
+    modeBtn.innerText = "🩸 Fill";
 }
 
 function onFileChange(event) {
@@ -123,9 +123,7 @@ canvas.addEventListener("mouseleave", cancelPainting);
 canvas.addEventListener("click", onCanvasClick);
 lineWidth.addEventListener("change", onLineWidthChange);
 color.addEventListener("change", onColorChange);
-
 colorOptions.forEach((color) => color.addEventListener("click", onColorClick));
-
 modeBtn.addEventListener("click", onModeClick);
 destroyBtn.addEventListener("click", onDestroyClick);
 eraserBtn.addEventListener("click", onEraserClick);
